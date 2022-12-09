@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+	"module": "esnext",
+	"target": "ES6",
+	"moduleResolution": "node",
+	"sourceMap": true,
+	"outDir": "dist",
+	"allowJs": true,
+	"lib": [ "ES6", "DOM" ],
+	"baseUrl": "./src",
+	"strict": true,
+	"forceConsistentCasingInFileNames": true,
+	"noFallthroughCasesInSwitch": true,
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"files": [
+		"src/server.ts"
+	]
+}
