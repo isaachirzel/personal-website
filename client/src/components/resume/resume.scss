@@ -1,0 +1,97 @@
+.divider {
+	display: flex;
+	align-items: center;
+}
+
+.divider > hr {
+	margin: 0 0.5em;
+	height: 0px;
+	flex: 1;
+	border: 1px solid black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.resume {
+	margin: 0 auto;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--page-width);
+	height: var(--page-height);
+	overflow: hidden;
+}
+
+.resume-content {
+	font-size: 12pt;
+	width: calc(var(--page-width) - var(--page-margin) * 2);
+	height: calc(var(--page-height) - var(--page-margin) * 2);
+
+	.resume-name {
+		text-align: center;
+		font-weight: bold;
+		font-size: 16pt;
+	}
+
+	section {
+		font-size: 11pt;
+		margin: 1em 0em;
+	}
+
+	.contact {
+		margin: 0.5em 0;
+		display: flex;
+		justify-content: center;
+		
+		>* {
+			margin: 0 1em;
+		}
+	}
+
+	.entry {
+		margin: 1em 0;
+		header {
+			margin-bottom: 0.5em;
+			display: flex;
+			
+			> .left {
+				min-width: 0;
+				flex: 1;
+				display: flex;
+				justify-content: flex-start;
+			}
+			
+			> .right {
+				min-width: 0;
+				flex: 1;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+
+		ul {
+			font-size: 10pt;
+			margin: 0;
+		}
+	}
+
+	.link {
+		color: blue;
+	}
+}
+
+@media screen {
+
+	.resume {
+		box-shadow:
+			0  5px 10px rgba(58, 58, 58, 0.05),
+			0 15px 40px rgba(0, 0, 0, 0.2);
+	}
+
+}
+
+@media print {
+	.about, .home, .app > header {
+		display: none;
+	}
+}

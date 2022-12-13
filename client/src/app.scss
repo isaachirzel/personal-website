@@ -1,0 +1,165 @@
+:root {
+	--olive: #585123;
+	--wine: #772F1A;
+	--mustard: #be8245;
+	--offset: 50%;
+	--page-width: 8.5in;
+	--page-height: 11in;
+	--page-margin: 0.5in;
+}
+
+@media screen {
+	.app {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+
+		> header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 5;
+			background-color: WHITE;
+			display: flex;
+			justify-content: center;
+		}
+
+		.home {
+			--block-size: 18px; /* change block size */
+			--hue: hue-rotate(0deg); /* change color hue*/
+			--south-east: var(--wine);
+			--south-west: var(--olive);
+			--north: var(--mustard);
+			--shadow: #222200;
+			--position: 50% / calc(var(--block-size) * 12) calc(var(--block-size) * 12.7);
+			height: 100vh;
+			filter: var(--hue);
+			background:
+				repeating-conic-gradient(
+						from 61.93deg at 75% 36.5%,
+						var(--south-east) 0%,
+						var(--south-east) 2%,
+						var(--shadow) 16%,
+						#fff0 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from 118.07deg at 75% 87.5%,
+						var(--north) 0% 34.5%,
+						#fff0 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from 118.07deg at 50% 75%,
+						#fff0 2%,
+						var(--shadow) 17.15%,
+						#fff0 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from 61.93deg at 50% 50%,
+						var(--north) 0% 15.59%,
+						var(--south-west) 0% 32.79%,
+						#fff0 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from -118.07deg at 25% 12.5%,
+						var(--south-west) 0% 32.79%,
+						var(--south-east) 0% 50%,
+						#fff0 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from -61.93deg at 25% 87.5%,
+						#fff0 0 67.25%,
+						var(--south-west) 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from -61.93deg at 50% 75%,
+						#fff0 0% 66.5%,
+						var(--south-east) 0% 84.25%,
+						var(--north) 0% 100%
+					)
+					var(--position),
+				repeating-conic-gradient(
+						from -61.93deg at 25% 37.5%,
+						var(--north) 0% 34.5%,
+						var(--south-east) 0% 67.25%,
+						var(--south-west) 0% 100%
+					)
+					var(--position);
+			min-height: 0;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			> .info {
+				font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+				font-weight: bold;
+				/* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; */
+				font-stretch:condensed;
+				margin: 0em auto;
+				width: fit-content;
+				color: white;
+
+				> .name {
+					font-size: 12vw;
+					margin-bottom: -3vw;
+				}
+			}
+		}
+
+		.about {
+			background-color: black;
+			height: 100vh;
+		}
+		
+		.title {
+			font-size: 4vw;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		
+		.socials {
+			display: flex;
+		}
+		
+		.bubble {
+			font-size: 1vw;
+			background-color: white;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0em 0.5vw;
+			width: 3vw;
+			height: 3vw;
+			color: black;
+		}
+		
+		.nav-item {
+			font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+			font-weight: bold;
+			color: black;
+			text-decoration: none;
+			margin: 0em 2em;
+			cursor: pointer;
+			padding: 1em;
+		}
+		
+		.nav-item:hover > div {
+			transform: translate(0, -5px);
+			transition-duration: 150ms;
+		}
+		
+		.resume-container {
+			overflow-y: auto;
+			padding: 1em;
+		}
+	}
+}
